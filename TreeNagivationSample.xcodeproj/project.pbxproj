@@ -13,6 +13,9 @@
 		7417D7EC1D05760C006CEE45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7417D7EA1D05760C006CEE45 /* Main.storyboard */; };
 		7417D7EE1D05760C006CEE45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7417D7ED1D05760C006CEE45 /* Assets.xcassets */; };
 		7417D7F11D05760C006CEE45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7417D7EF1D05760C006CEE45 /* LaunchScreen.storyboard */; };
+		7417D7FA1D057764006CEE45 /* CitiysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7417D7F91D057764006CEE45 /* CitiysViewController.m */; };
+		7417D7FD1D05BDFC006CEE45 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7417D7FC1D05BDFC006CEE45 /* DetailViewController.m */; };
+		7417D7FF1D05C85B006CEE45 /* provinces_cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7417D7FE1D05C85B006CEE45 /* provinces_cities.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		7417D7ED1D05760C006CEE45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7417D7F01D05760C006CEE45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7417D7F21D05760C006CEE45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7417D7F81D057764006CEE45 /* CitiysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiysViewController.h; sourceTree = "<group>"; };
+		7417D7F91D057764006CEE45 /* CitiysViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiysViewController.m; sourceTree = "<group>"; };
+		7417D7FB1D05BDFC006CEE45 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		7417D7FC1D05BDFC006CEE45 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		7417D7FE1D05C85B006CEE45 /* provinces_cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = provinces_cities.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 		7417D7E01D05760C006CEE45 /* TreeNagivationSample */ = {
 			isa = PBXGroup;
 			children = (
+				7417D7FE1D05C85B006CEE45 /* provinces_cities.plist */,
 				7417D7E41D05760C006CEE45 /* AppDelegate.h */,
 				7417D7E51D05760C006CEE45 /* AppDelegate.m */,
 				7417D7E71D05760C006CEE45 /* ViewController.h */,
@@ -67,6 +76,10 @@
 				7417D7EF1D05760C006CEE45 /* LaunchScreen.storyboard */,
 				7417D7F21D05760C006CEE45 /* Info.plist */,
 				7417D7E11D05760C006CEE45 /* Supporting Files */,
+				7417D7F81D057764006CEE45 /* CitiysViewController.h */,
+				7417D7F91D057764006CEE45 /* CitiysViewController.m */,
+				7417D7FB1D05BDFC006CEE45 /* DetailViewController.h */,
+				7417D7FC1D05BDFC006CEE45 /* DetailViewController.m */,
 			);
 			path = TreeNagivationSample;
 			sourceTree = "<group>";
@@ -137,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7417D7F11D05760C006CEE45 /* LaunchScreen.storyboard in Resources */,
+				7417D7FF1D05C85B006CEE45 /* provinces_cities.plist in Resources */,
 				7417D7EE1D05760C006CEE45 /* Assets.xcassets in Resources */,
 				7417D7EC1D05760C006CEE45 /* Main.storyboard in Resources */,
 			);
@@ -149,7 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7417D7FD1D05BDFC006CEE45 /* DetailViewController.m in Sources */,
 				7417D7E91D05760C006CEE45 /* ViewController.m in Sources */,
+				7417D7FA1D057764006CEE45 /* CitiysViewController.m in Sources */,
 				7417D7E61D05760C006CEE45 /* AppDelegate.m in Sources */,
 				7417D7E31D05760C006CEE45 /* main.m in Sources */,
 			);
@@ -263,6 +279,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				INFOPLIST_FILE = TreeNagivationSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sirius.cn.TreeNagivationSample;
@@ -274,6 +291,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				INFOPLIST_FILE = TreeNagivationSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sirius.cn.TreeNagivationSample;
@@ -300,6 +318,7 @@
 				7417D7F71D05760C006CEE45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

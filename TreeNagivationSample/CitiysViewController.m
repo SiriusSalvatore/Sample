@@ -7,6 +7,7 @@
 //
 
 #import "CitiysViewController.h"
+#import "DetailViewController.h"
 
 @interface CitiysViewController ()
 
@@ -22,6 +23,38 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.listData count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString* cellIdentifier = @"CellIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    NSInteger row = [indexPath row];
+    NSDictionary *dict = [self.listData objectAtIndex:row];
+    
+    cell.textLabel.text = [dict objectForKey:@"name"];
+    
+    return cell;
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"ShowSelectedCity"]) {
+        DetailViewController *detailViewController = segue.destinationViewController;
+        
+        NSInteger selectedIndex = [[self.tableView indexPathForSelectedRow] row];
+        NSDictionary* dict = [self.listData objectAtIndex:selectedIndex];
+        
+        detailViewController.url = [dict objectForKey:@"url"];
+        detailViewController.title = [dict objectForKey:@"name"];
+    }
 }
 
 /*

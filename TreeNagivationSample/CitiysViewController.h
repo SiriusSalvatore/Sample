@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CitiysViewController : UIViewController
+@interface CitiysViewController : UITableViewController
 
+@property (weak, nonatomic) NSArray *listData;
 @end

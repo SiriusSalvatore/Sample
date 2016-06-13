@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UITableViewController
 
+@property (strong, nonatomic) NSDictionary* dirData;
+@property (strong, nonatomic) NSArray* listData;
 
 @end
 

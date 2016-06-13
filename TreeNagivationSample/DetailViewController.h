@@ -10,4 +10,7 @@
 
 @interface DetailViewController : UIViewController
 
+@property (weak, nonatomic) NSString *url;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
 @end
